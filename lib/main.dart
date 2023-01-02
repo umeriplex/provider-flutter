@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:satate_management_one/providers/auth_provider.dart';
 import 'package:satate_management_one/providers/count_provider.dart';
 import 'package:satate_management_one/providers/example_one_provider.dart';
 import 'package:satate_management_one/providers/favourite_provider.dart';
@@ -11,6 +12,7 @@ import 'package:satate_management_one/theme_screens/dark_theme.dart';
 import 'change_state/notify_listner_change.dart';
 import 'favorites/favourite_screen.dart';
 import 'home_screen.dart';
+import 'logiin_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => CountProvider()),
         ChangeNotifierProvider(create: (_) => ExampleOneProvider()),
         ChangeNotifierProvider(create: (_) => FavouriteProvider()),
+<<<<<<< HEAD
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ],
       child: Builder(
@@ -51,6 +54,16 @@ class MyApp extends StatelessWidget {
             home: NotifyChangeListeners(),
           );
         },
+=======
+        ChangeNotifierProvider(create: (_) => LoginProvider()),
+      ],
+      child: MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: const LoginScreen(),
+>>>>>>> 8e88ad8ad75b5e2200bfca7ddbb56d164f57c1a0
       ),
     );
   }
